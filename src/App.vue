@@ -1,16 +1,26 @@
 <template>
   <div id="app">
-    <AppHeader />
+    <header>
+      <AppHeader />
+    </header>
+    <main>
+      <AppTrackList />
+      <AppTrackCard />
+    </main>
   </div>
 </template>
 
 <script>
-import AppHeader from './components/AppHeader.vue'
+import AppHeader from './components/AppHeader.vue';
+import AppTrackList from './components/AppTrackList.vue';
+import AppTrackCard from './components/AppTrackCard.vue';
 export default {
   name: 'App',
   components: {
     AppHeader,
-  }
+    AppTrackList,
+    AppTrackCard,
+}
 }
 </script>
 

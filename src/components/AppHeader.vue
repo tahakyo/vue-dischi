@@ -8,7 +8,7 @@
 
 <script>
 export default {
-
+  name: "AppHeader"
 }
 </script>
 
@@ -18,6 +18,7 @@ header {
   background-color: $bg-secondary-color;  
   .logo {
     width: 5rem;
+    padding: 5px 0;
   }
 }
 </style>
