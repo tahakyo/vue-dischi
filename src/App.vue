@@ -1,19 +1,19 @@
 <template>
   <div id="app">
-    ciao mondo
+    <AppHeader />
   </div>
 </template>
 
 <script>
-
+import AppHeader from './components/AppHeader.vue'
 export default {
   name: 'App',
   components: {
+    AppHeader,
   }
 }
 </script>
 
 <style lang="scss">
 @import "./components/style/common.scss";
-@import "./components/style/variables.scss";
 </style>
