@@ -1,16 +1,19 @@
 <template>
   <div class="track-card text-center">
-    <img src="https://img.discogs.com/vknPDdrqRbT92pNRX0W4I5N91jg=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-1246953-1448927086-6590.jpeg.jpg" alt="">
-    <h2 class="fw-bold fs-5 text-uppercase">Live at Wembley 86</h2>
-    <h5>Queen</h5>
-    <h6>1992</h6>
+    <img :src="albumObj.poster" alt="">
+    <h2 class="fw-bold fs-5 text-uppercase">{{albumObj.title}}</h2>
+    <h5>{{albumObj.author}}</h5>
+    <h6>{{albumObj.year}}</h6>
   </div>
 </template>
 
 <script>
 export default {
-  name: "AppTrackCard"
-}
+  name: "AppTrackCard",
+  props: {
+    albumObj: Object,
+  },
+};
 </script>
 
 <style lang="scss" scoped>
