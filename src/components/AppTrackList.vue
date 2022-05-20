@@ -33,7 +33,7 @@ export default {
 <style lang="scss" scoped>
 .ms_container {
   max-width: 1200px;
-  max-height: 700px;
+  max-height: 750px;
   overflow: auto;
 }
 </style>

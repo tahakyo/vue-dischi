@@ -6,6 +6,7 @@
     <main>
       <AppTrackList />
     </main>
+    <footer></footer>
   </div>
 </template>
 

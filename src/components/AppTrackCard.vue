@@ -19,7 +19,7 @@ export default {
 <style lang="scss" scoped>
 @import "./style/variables.scss";
 .track-card {
-  height: 360px;
+  height: 375px;
   width: 200px;
   background-color: $bg-secondary-color;
   padding: 1rem;
