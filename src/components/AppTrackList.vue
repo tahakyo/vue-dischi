@@ -47,14 +47,14 @@ export default {
   computed: {
     filtredByGenre() {
       const filtredAlbum = this.trackList.filter((item) => {
-        return item.genre.includes(this.filterSelector)
+        return item.genre.includes(this.genre);
       })
       return filtredAlbum;
     }
   },
   methods: {
-    filterSelector(event) {
-      console.log('ricevuto');
+    filterSelector(optionValue) {
+      this.genre = optionValue
     },
   }
 };
