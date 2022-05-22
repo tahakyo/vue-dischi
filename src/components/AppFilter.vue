@@ -8,7 +8,7 @@
         v-model="filterGenre"
         @change="sendEvent"
       >
-        <option selected>Tutti i generi</option>
+        <option selected value="">Tutti i generi</option>
         <option value="Rock">Rock</option>
         <option value="Jazz">Jazz</option>
         <option value="Pop">Pop</option>
@@ -22,16 +22,16 @@
 <script>
 export default {
   name: "AppFilter",
-  data: function() {
+  data: function () {
     return {
-      filterGenre: ""
+      filterGenre: "",
     };
   },
   methods: {
     sendEvent() {
-      this.$emit("selectedGenre", this.filterGenre)
-    }
-  }
+      this.$emit("selectedGenre", this.filterGenre);
+    },
+  },
 };
 </script>
 

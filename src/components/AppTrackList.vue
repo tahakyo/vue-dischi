@@ -12,7 +12,7 @@
         "
       >
         <AppTrackCard
-          v-for="(item, index) in trackList"
+          v-for="(item, index) in filtredByGenre"
           :key="index"
           :albumObj="item"
         />
@@ -29,8 +29,8 @@ export default {
   name: "AppTrackList",
   components: {
     AppTrackCard,
-    AppFilter
-},
+    AppFilter,
+  },
   data: function () {
     return {
       trackList: [],
@@ -48,15 +48,15 @@ export default {
     filtredByGenre() {
       const filtredAlbum = this.trackList.filter((item) => {
         return item.genre.includes(this.genre);
-      })
+      });
       return filtredAlbum;
-    }
+    },
   },
   methods: {
     filterSelector(optionValue) {
-      this.genre = optionValue
+      this.genre = optionValue;
     },
-  }
+  },
 };
 </script>
 
