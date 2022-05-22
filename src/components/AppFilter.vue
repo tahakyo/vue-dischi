@@ -5,12 +5,14 @@
         class="form-select"
         id="floatingSelect"
         aria-label="Floating label select example"
+        v-model="filterGenre"
+        @change="sendEvent"
       >
-        <option selected>Clicca per selezionare</option>
-        <option value="1">Rock</option>
-        <option value="2">Jazz</option>
-        <option value="3">Pop</option>
-        <option value="4">Metal</option>
+        <option selected>Tutti i generi</option>
+        <option value="rock">Rock</option>
+        <option value="jazz">Jazz</option>
+        <option value="pop">Pop</option>
+        <option value="metal">Metal</option>
       </select>
       <label for="floatingSelect">Filtra per genere</label>
     </div>
@@ -20,6 +22,16 @@
 <script>
 export default {
   name: "AppFilter",
+  data: function() {
+    return {
+      filterGenre: ""
+    };
+  },
+  methods: {
+    sendEvent() {
+      this.$emit("selectedGenre", this.filterGenre)
+    }
+  }
 };
 </script>
 

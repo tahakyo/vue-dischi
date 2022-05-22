@@ -1,6 +1,6 @@
 <template>
   <section>
-    <AppFilter />
+    <AppFilter @selectedGenre="filterSelector($event)" />
     <div class="container ms_container mt-5">
       <div
         class="
@@ -34,6 +34,7 @@ export default {
   data: function () {
     return {
       trackList: [],
+      genre: "",
     };
   },
   created() {
@@ -43,6 +44,19 @@ export default {
         this.trackList = resp.data.response;
       });
   },
+  computed: {
+    filtredByGenre() {
+      const filtredAlbum = this.trackList.filter((item) => {
+        return item.genre.includes(this.filterSelector)
+      })
+      return filtredAlbum;
+    }
+  },
+  methods: {
+    filterSelector(event) {
+      console.log('ricevuto');
+    },
+  }
 };
 </script>
 
